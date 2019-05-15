@@ -1,22 +1,46 @@
 ## CHANGELOG:
+* v7.1 - Added installer and support for Debian, Parrot and Ubuntu OS (install_debian.sh)
+* v7.0 - Added "webscan" mode for automated Burpsuite 2.x and Arachni web application scans only
+* v7.0 - Added Slack API notifications (Disabled by default..check ~/.sniper.conf)
+* v7.0 - Added new command switch to add daily, weekly or monthly sniper scheduled scans... check README
+* v7.0 - Added scheduled scan tasks command switch (Needs additional configuration to setup... check README)
+* v7.0 - Added Axis2 authenticated deployer MSF exploit
+* v7.0 - Added Axis2 login brute force module
+* v7.0 - Added subjack tool to check for subdomain hijacking
+* v7.0 - Added sorted IP lists under $LOOT_DIR/ips/ips-all-sorted.txt
+* v7.0 - Added subnet retrieval for all 'recon' mode scans under $LOOT_DIR/nmap/subnets-$TARGET.txt
+* v7.0 - Added Webscreenshot.py and disabled cutycapt from default config
+* v7.0 - Added Gobuster (Disabled by default..check ~/.sniper.conf)
+* v7.0 - Fixed issue with SubOver not working due to bad path
+* v7.0 - Fixed issue with flyover mode running 2x 
+* v6.3 - Added Drupal RESET Unserialize RCE CVE-2019-6340
+* v6.2 - Added Glassfish Admin traversal MSF exploit 
+* v6.2 - Added ElasticSearch Java Injection MSF RCE exploit
+* v6.2 - Added WebTech web fingerprinting tool
+* v6.2 - Added censys subdomain retrieval and API key config
+* v6.2 - Added project sonar sub-domain retrieval
+* v6.2 - Added command switch to remove workspace (-d)
+* v6.2 - Added command switch to remove host (-dh)
+* v6.2 - Added DockerFile to run Sn1per in Docker (CC. Hariom Vashisth <hariom.devops@gmail.com>)
+* v6.2 - Changed option to automatically import all NMap XML's into Metasploit's DB
+* v6.2 - Changed option to automatically load Sn1per Professional's report when scans complete
+* v6.2 - Added config option to enable/disable subdomain hijacking checks in sniper.conf
+* v6.2 - Fixed issue with sniper --list command having invalid reference
+* v6.2 - Fixed issue with theharvester not running
 * v6.1 - Added automated web scanning via Burpsuite Pro 2.x API for all 'web' mode scans
 * v6.1 - Added Waybackmachine URL retrieval to all web scans
-* v6.1 - Added Elasticsearch Kibana Console LFI CVE-2018-17246 vuln check
-* v6.1 - Added 4 levels of brute forcing to all web mode scans
-* v6.1 - Added configurable options for ALL scan plugins and options in Sn1per
-* v6.1 - Added logging for ALL tools and exploits
-* v6.1 - Added NMap latest Github repo to install.sh to fix issue with LUA libs
+* v6.1 - Converted all exploits to Metasploit
+* v6.1 - Added configuration options to set LHOST/LPORT for all Metasploit exploits in sniper.conf
+* v6.1 - Added improved web brute forcing dictionaries for all scan modes
+* v6.1 - Added individual logging for all tools under the loot directory
+* v6.1 - Added new sniper.conf options to enabled/disable all plugins and change settings per user
 * v6.1 - Fixed issue with CMSMap install/usage
 * v6.1 - Fixed issue with WPScan gem dependency missing (public_suffix)
 * v6.1 - Fixed timeout setting in cutycapt
-* v6.1 - Fixed script errors with CVE-2018-15473 sshUsernameEnumExploit.py
-* v6.1 - Improved SSLyze scan options
-* v6.1 - Updated domain list used by Aquatone
-* v6.1 - Removed http-vuln-cve2017-5638.nse script due to outdated NMap libs
-* v6.1 - Removed serializekiller plugin from install.sh
-* v6.1 - Removed cansina plugin from install.sh
-* v6.1 - Removed testssll.sh plugin from install.sh
+* v6.1 - Fixed issue with theharvester not running correctly
 * v6.1 - Fixed issue with Amass not running due to invalid command line options in latest release
+* v6.1 - Fixed issue with Sn1per Professional notepad.html missing
+* v6.1 - Cleaned up plugins and install dependencies list
 * v6.0 - Improved scan options for discover mode scans
 * v6.0 - Fixed issue with pip3 dependency package missing
 * v6.0 - Removed iceweasel from install.sh to fix apt error
